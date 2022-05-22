@@ -217,4 +217,5 @@ document.addEventListener('touchend',(e)=>{
             setTwo()
         }
     }
+    document.querySelector('.scoreText').innerText = score
 })
