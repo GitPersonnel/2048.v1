@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    height: 100vh;
+    background-color: #FAF8EF;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.board{
+    background-color: #BBADA0;
+    border-radius: 1rem;
+    border: .75rem solid #BBADA0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size:4.2rem;
+    width: 25%;   
+    height: 25%;
+    border: .75rem solid #BBADA0;
+    border-radius: 1rem;
+    background-color: #CDC1B4;
+}
+.x2 {
+    background-color: #eee4da;
+    color: #727371;
+}
+
+.x4 {
+    background-color: #ece0ca;
+    color: #727371;
+}
+
+.x8 {
+    background-color: #f4b17a;
+    color: white;
+}
+
+.x16{
+    background-color: #f59575;
+    color: white;
+}
+
+.x32{
+    background-color: #f57c5f;
+    color: white;
+}
+
+.x64{
+    background-color: #f65d3b;
+    color: white;
+}
+
+.x128{
+    background-color: #edce71;
+    color: white;
+}
+
+.x256{
+    background-color: #edcc63;
+    color: white;
+}
+
+.x512{
+    background-color: #edc651;
+    color: white;
+}
+
+.x1024{
+    background-color: #eec744;
+    color: white;
+}
+
+.x2048{
+    background-color: #ecc230;
+    color: white;
+}
+
+.x4096 {
+    background-color: #fe3d3d;
+    color: white;
+}
+
+.x8192 {
+    background-color: #ff2020;
+    color: white;
+}
+.score{
+    width: 40%;
+    height: 15%;
+    border-radius: 1rem;
+    background: #BBADA0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mtitle{
+    color: #776E65;
+    font-size: 9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.scoreboard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.scoreLabel{
+    color: #EDE3D9;
+    font-size: 2rem;
+}
+.scoreText{
+    color: #FEFEFE;
+    font-size: 3rem;
+}
+.HowToPlay{
+    font-size: 2.6rem;
+    font-family: sans-serif;
+    color: #776E65;
+}
