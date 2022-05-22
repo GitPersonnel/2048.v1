@@ -2,6 +2,10 @@ let board;
 const COLUMNS = 4;
 const ROWS = 4
 let score = 0
+let pY = 0
+let pX = 0
+let mY = 0
+let mX = 0
 function responsive(){
     if(window.innerWidth>=window.innerHeight){
         document.body.setAttribute('style',`flex-direction : row;`)
@@ -80,7 +84,6 @@ function updateTile(tile,num){
     tile.classList.value = ""
     tile.classList.add("tile")
     if(num > 0){
-        console.log("ff");
         tile.innerText = num
         if(num <= 4096){
             tile.classList.add(`x${num}`)
@@ -129,7 +132,6 @@ function slide(row){
     while(row.length < COLUMNS){
         row.push(0)
     }
-    console.log(row);
     return row
 }
 
@@ -187,3 +189,32 @@ function slideDown(){
         }
     }
 }
+
+document.addEventListener('touchstart',(e)=>{
+    pX = e.changedTouches[0].clientX
+    pY = e.changedTouches[0].clientY
+})
+document.addEventListener('touchend',(e)=>{
+    mX = e.changedTouches[0].clientX - pX
+    mY = e.changedTouches[0].clientY - pY
+    if(Math.abs(mX)>=Math.abs(mY)){
+        if(Math.sign(mX) == -1){
+            slideLeft()
+            setTwo()
+        }
+        else if(Math.sign(mX) == 1){
+            slideRight()
+            setTwo()
+        }
+    }
+    else{
+        if(Math.sign(mY) == -1){
+            slideUp()
+            setTwo()
+        }
+        else if(Math.sign(mY) == 1){
+            slideDown()
+            setTwo()
+        }
+    }
+})
