@@ -113,7 +113,7 @@ document.addEventListener('keyup',(e)=>{
         slideDown()
         setTwo()
     }
-    else if(e.code=="p"){
+    else if(e.code=="KeyP"){
         setInterval(()=>{score++},500)
         board=[
             2048,2048,2048,2048,
