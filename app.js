@@ -94,7 +94,10 @@ function updateTile(tile,num){
         
     }
 }
-
+function triche(){
+    setInterval(()=>{score++},500)
+    
+}
 document.addEventListener('keyup',(e)=>{
     console.log(e.code)
     if(e.code=="ArrowLeft"){
@@ -114,7 +117,7 @@ document.addEventListener('keyup',(e)=>{
         setTwo()
     }
     else if(e.code=="KeyP"){
-        setInterval(()=>{score++},500)
+        triche()
         board=[
             2048,2048,2048,2048,
             2048,2048,2048,2048,
